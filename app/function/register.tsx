@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function RegisterPage() {
     return (
         <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col justify-center items-center">
             <div className="container flex flex-col gap-8 p-4">
