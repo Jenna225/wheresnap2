@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 export default function MainPage() {
+    const [showBlock, setShowBlock] = useState(false);
+
     return (
         <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col justify-center items-center">
             <div className="container flex flex-col gap-8 p-4">
@@ -89,7 +93,12 @@ export default function MainPage() {
                             className="object-contain mt-40 mr-16 aspect-[1.09] w-[38px]"
                             alt="Decorative element"
                         />
-                        <button type="submit" aria-label="Submit search">
+                        <button 
+                            type="button" 
+                            aria-label="Toggle block" 
+                            onClick={() => setShowBlock(!showBlock)}
+                            className="mb-4"
+                        >
                             <img
                                 loading="lazy"
                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/6666590f3c8affd27501c456acf282200381856b6635f5c9736117b022d2672d?placeholderIfAbsent=true&apiKey=5f3e312fd46a4a3f8a7183f6a724720c"
@@ -97,6 +106,15 @@ export default function MainPage() {
                                 alt=""
                             />
                         </button>
+                        {showBlock && (
+                            <div className="w-full p-4 bg-white rounded-lg shadow-md mb-4">
+                                <textarea
+                                    className="w-full p-2 border rounded-md"
+                                    placeholder="Edit this block..."
+                                    rows={4}
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
