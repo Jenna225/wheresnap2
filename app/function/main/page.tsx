@@ -96,17 +96,30 @@ export default function MainPage() {
                             alt="Decorative element"
                         />
                         {showBlock && (
-                            <div className="w-full p-4 bg-white rounded-lg shadow-md mb-4">
-                                <textarea
-                                    className="w-full p-2 border rounded-md"
-                                    placeholder="Edit this block..."
-                                    rows={4}
-                                />
+                            <div className="w-48 p-4 bg-white rounded-lg shadow-md mb-2 space-y-2 z-50">
+                                <button
+                                    className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                                    onClick={() => window.location.href = '/page1'}
+                                >
+                                    頁面 1
+                                </button>
+                                <button
+                                    className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                                    onClick={() => window.location.href = '/page2'}
+                                >
+                                    頁面 2
+                                </button>
+                                <button
+                                    className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                                    onClick={() => window.location.href = '/page3'}
+                                >
+                                    頁面 3
+                                </button>
                             </div>
                         )}
-                        <button 
-                            type="button" 
-                            aria-label="Toggle block" 
+                        <button
+                            type="button"
+                            aria-label="Toggle block"
                             onClick={() => setShowBlock(!showBlock)}
                             className="mb-4 absolute bottom-0"
                         >
