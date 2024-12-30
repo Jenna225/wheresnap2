@@ -95,33 +95,35 @@ export default function MainPage() {
                             className="object-contain mt-40 mr-16 aspect-[1.09] w-[38px]"
                             alt="Decorative element"
                         />
-                        {showBlock && (
-                            <div className="w-48 p-4 bg-white rounded-lg shadow-md mb-2 space-y-2 z-50">
-                                <button
-                                    className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
-                                    onClick={() => window.location.href = '/page1'}
-                                >
-                                    頁面 1
-                                </button>
-                                <button
-                                    className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
-                                    onClick={() => window.location.href = '/page2'}
-                                >
-                                    頁面 2
-                                </button>
-                                <button
-                                    className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
-                                    onClick={() => window.location.href = '/page3'}
-                                >
-                                    頁面 3
-                                </button>
-                            </div>
-                        )}
+                        <div className="absolute bottom-16 right-3">
+                            {showBlock && (
+                                <div className="w-48 p-4 bg-white rounded-lg shadow-md mb-2 space-y-2 z-50">
+                                    <button
+                                        className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                                        onClick={() => window.location.href = '/page1'}
+                                    >
+                                        頁面 1
+                                    </button>
+                                    <button
+                                        className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                                        onClick={() => window.location.href = '/page2'}
+                                    >
+                                        頁面 2
+                                    </button>
+                                    <button
+                                        className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
+                                        onClick={() => window.location.href = '/page3'}
+                                    >
+                                        頁面 3
+                                    </button>
+                                </div>
+                            )}
+                        </div>
                         <button
                             type="button"
                             aria-label="Toggle block"
                             onClick={() => setShowBlock(!showBlock)}
-                            className="mb-4 absolute bottom-0"
+                            className="mb-4 absolute bottom-0 right-3"
                         >
                             <img
                                 loading="lazy"
