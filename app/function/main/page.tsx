@@ -95,6 +95,15 @@ export default function MainPage() {
                             className="object-contain mt-40 mr-16 aspect-[1.09] w-[38px]"
                             alt="Decorative element"
                         />
+                        {showBlock && (
+                            <div className="w-full p-4 bg-white rounded-lg shadow-md mb-4">
+                                <textarea
+                                    className="w-full p-2 border rounded-md"
+                                    placeholder="Edit this block..."
+                                    rows={4}
+                                />
+                            </div>
+                        )}
                         <button 
                             type="button" 
                             aria-label="Toggle block" 
@@ -108,15 +117,6 @@ export default function MainPage() {
                                 alt=""
                             />
                         </button>
-                        {showBlock && (
-                            <div className="w-full p-4 bg-white rounded-lg shadow-md mb-4">
-                                <textarea
-                                    className="w-full p-2 border rounded-md"
-                                    placeholder="Edit this block..."
-                                    rows={4}
-                                />
-                            </div>
-                        )}
                     </div>
                 </div>
             </div>
