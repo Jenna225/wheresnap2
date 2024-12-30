@@ -43,13 +43,13 @@ export default function Home() {
                     <div className="flex flex-col gap-4">
                         <a
                             className="w-full w-[200px] rounded-full border border-gray-300 transition-colors flex items-center justify-center bg-white text-black text-sm h-12"
-                            href="/function/register.tsx"
+                            href="/function/register"
                         >
                             註冊
                         </a>
                         <a
                             className="w-full w-[200px] rounded-full border transition-colors flex items-center justify-center bg-black text-white text-sm h-12"
-                            href="/function/page"
+                            href="/"
                         >
                             登入
                         </a>
