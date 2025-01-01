@@ -75,11 +75,11 @@ export default function FavoritesPage() {
     ];
 
     return (
-        <div className="w-[430px] min-h-screen mx-auto border-2 border-black flex flex-col">
-            <div className="container flex flex-col p-4 flex-1">
+        <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col">
+            <div className="container flex flex-col p-4">
                 <h1 className="text-2xl font-bold mb-4">收藏地標</h1>
                 
-                <div className="space-y-4 flex-1 overflow-y-auto pb-20">
+                <div className="space-y-4 overflow-y-auto h-[700px]">
                     {favoritePlaces.map((place, index) => (
                         <div key={index} className="bg-white rounded-lg shadow-md p-4">
                             <div className="flex gap-4">
@@ -106,7 +106,7 @@ export default function FavoritesPage() {
                     ))}
                 </div>
                 
-                <div className="fixed bottom-4 right-4">
+                <div className="mt-4">
                     <Link 
                         href="/function/main" 
                         className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
