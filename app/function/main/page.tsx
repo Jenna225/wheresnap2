@@ -36,9 +36,8 @@ export default function MainPage() {
                             className="flex gap-5 justify-between px-4 py-3 w-full rounded-2xl bg-white bg-opacity-70 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
                             role="search"
                         >
-                            <button 
-                                type="button" 
-                                className="flex gap-4 my-auto"
+                            <div 
+                                className="flex gap-4 my-auto cursor-pointer"
                                 aria-label="Submit search"
                             >
                                 <img
@@ -50,10 +49,12 @@ export default function MainPage() {
                                 <div className="my-auto bg-transparent border-none outline-none">
                                     選擇類別
                                 </div>
-                            </button>
+                            </div>
 
-                            <button type="button"
-                                    onClick={() => setShowCategories(!showCategories)}>
+                            <div 
+                                className="cursor-pointer"
+                                onClick={() => setShowCategories(!showCategories)}
+                            >
                                 <img
                                     loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/6666590f3c8affd27501c456acf282200381856b6635f5c9736117b022d2672d?placeholderIfAbsent=true&apiKey=5f3e312fd46a4a3f8a7183f6a724720c"
@@ -63,21 +64,21 @@ export default function MainPage() {
                                 {showCategories && (
                                     <div className="absolute top-16 left-4 right-4 bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
                                         {categories.map(category => (
-                                            <button
+                                            <div
                                                 key={category}
                                                 onClick={() => handleCategoryClick(category)}
-                                                className={`px-4 py-2 rounded-full text-sm ${
+                                                className={`px-4 py-2 rounded-full text-sm cursor-pointer ${
                                                     selectedCategories.includes(category)
                                                         ? 'bg-black text-white'
                                                         : 'bg-gray-100 text-black'
                                                 }`}
                                             >
                                                 {category}
-                                            </button>
+                                            </div>
                                         ))}
                                     </div>
                                 )}
-                            </button>
+                            </div>
                         </form>
                         <img
                             loading="lazy"
