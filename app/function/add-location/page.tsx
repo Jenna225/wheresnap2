@@ -111,7 +111,6 @@ export default function AddLocationPage() {
                             onChange={(e) => setDetails(e.target.value)}
                             className="w-full border-2 border-gray-300 rounded-lg p-2 h-32"
                             placeholder="輸入地點的詳細資訊"
-                            required
                         />
                     </div>
 
