@@ -133,8 +133,8 @@ export default function MainPage() {
                             </div>
 
                             {/* Location Cards Section */}
-                            <div className="mt-8 overflow-x-auto whitespace-nowrap pb-4">
-                                <div className="inline-flex gap-4">
+                            <div className="mt-8 w-full overflow-x-auto whitespace-nowrap pb-4" style={{ WebkitOverflowScrolling: 'touch' }}>
+                                <div className="inline-flex gap-4 px-4">
                                     {[
                                         {
                                             name: "台北101",
