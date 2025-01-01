@@ -132,7 +132,7 @@ export default function MainPage() {
                             </div>
 
                             {/* Location Cards Section */}
-                            <div className="mt-2 w-full overflow-x-auto whitespace-nowrap pb-4" style={{ 
+                            <div className="mt-1 w-full overflow-x-auto whitespace-nowrap pb-4" style={{ 
                                 WebkitOverflowScrolling: 'touch',
                                 scrollbarWidth: 'none', /* Firefox */
                                 msOverflowStyle: 'none'  /* IE 10+ */
