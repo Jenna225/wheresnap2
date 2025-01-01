@@ -84,55 +84,62 @@ export default function FavoritesPage() {
     };
 
     return (
-        <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col">
-            <div className="container flex flex-col p-4">
-                <div className="flex justify-between items-center mb-4">
-                    <Link
-                        href="/function/main"
-                        className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
-                    >
-                        返回
-                    </Link>
-                </div>
-                <h1 className="text-2xl font-bold mb-4">收藏地標</h1>
+        <div>
+            <br></br>
+            <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col">
+                <div className="container flex flex-col p-4">
+                    <div className="flex justify-between items-center mb-4">
+                        <Link
+                            href="/function/main"
+                            className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
+                        >
+                            返回
+                        </Link>
+                    </div>
+                    <h1 className="text-2xl font-bold mb-4">收藏地標</h1>
 
-                <div className="space-y-4 overflow-y-auto h-[700px]">
-                    {favoritePlaces.map((place, index) => (
-                        <div key={index} className="bg-white rounded-lg shadow-md p-4 relative">
-                            <button
-                                onClick={() => handleRemoveFavorite(index)}
-                                className="absolute top-4 right-4 text-red-500 hover:text-red-700"
-                                aria-label="Remove from favorites"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-                                </svg>
-                            </button>
-                            <div className="flex gap-4">
-                                <img
-                                    src={place.image}
-                                    alt={place.name}
-                                    className="w-24 h-24 object-cover rounded-lg"
-                                />
-                                <div className="flex-1">
-                                    <h2 className="text-lg font-semibold">{place.name}</h2>
-                                    <div className="flex items-center gap-1 text-yellow-400">
-                                        {Array.from({length: 5}, (_, i) => (
-                                            <span key={i}
-                                                  className={i < Math.floor(place.rating) ? "text-yellow-400" : "text-gray-300"}>
+                    <div className="space-y-4 overflow-y-auto h-[700px]">
+                        {favoritePlaces.map((place, index) => (
+                            <div key={index} className="bg-white rounded-lg shadow-md p-4 relative">
+                                <button
+                                    onClick={() => handleRemoveFavorite(index)}
+                                    className="absolute top-4 right-4 text-red-500 hover:text-red-700"
+                                    aria-label="Remove from favorites"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20"
+                                         fill="currentColor">
+                                        <path fillRule="evenodd"
+                                              d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                              clipRule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <div className="flex gap-4">
+                                    <img
+                                        src={place.image}
+                                        alt={place.name}
+                                        className="w-24 h-24 object-cover rounded-lg"
+                                    />
+                                    <div className="flex-1">
+                                        <h2 className="text-lg font-semibold">{place.name}</h2>
+                                        <div className="flex items-center gap-1 text-yellow-400">
+                                            {Array.from({length: 5}, (_, i) => (
+                                                <span key={i}
+                                                      className={i < Math.floor(place.rating) ? "text-yellow-400" : "text-gray-300"}>
                                                 ★
                                             </span>
-                                        ))}
-                                        <span className="text-gray-500 text-sm ml-1">({place.rating})</span>
+                                            ))}
+                                            <span className="text-gray-500 text-sm ml-1">({place.rating})</span>
+                                        </div>
+                                        <p className="text-sm text-gray-600 mt-1">{place.address}</p>
+                                        <p className="text-sm text-gray-500 mt-2">{place.description}</p>
                                     </div>
-                                    <p className="text-sm text-gray-600 mt-1">{place.address}</p>
-                                    <p className="text-sm text-gray-500 mt-2">{place.description}</p>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
+
     );
 }
