@@ -5,11 +5,11 @@ import { useState } from 'react';
 
 export default function PersonalInfoPage() {
     const [isEditing, setIsEditing] = useState(false);
-    const [name, setName] = useState("張三");
-    const [bio, setBio] = useState("熱愛旅行和攝影的台灣人");
+    const [name, setName] = useState("彼得潘");
+    const [bio, setBio] = useState("我喜歡旅遊和攝影!");
     const [profileImage, setProfileImage] = useState("https://picsum.photos/200/200?random=11");
-    const [email, setEmail] = useState("zhangsan@example.com");
-    const [id, setId] = useState("A123456789");
+    const [email, setEmail] = useState("peter@example.com");
+    const [id, setId] = useState("peter1029");
 
     const handleSave = () => {
         setIsEditing(false);
@@ -51,7 +51,6 @@ export default function PersonalInfoPage() {
                         )}
                     </div>
 
-                    
 
                     {/* Name */}
                     <div className="w-full">
@@ -89,7 +88,7 @@ export default function PersonalInfoPage() {
 
                     {/* ID */}
                     <div className="w-full">
-                        <label className="block text-sm font-medium text-gray-700 mb-1">身分證字號</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">用戶ID</label>
                         {isEditing ? (
                             <input
                                 type="text"
@@ -111,7 +110,7 @@ export default function PersonalInfoPage() {
                             <textarea
                                 value={bio}
                                 onChange={(e) => setBio(e.target.value)}
-                                className="w-full border-2 border-gray-300 rounded-lg p-2 h-32"
+                                className="w-full border-2 border-gray-300 rounded-lg p-2 h-16"
                             />
                         ) : (
                             <div className="w-full border-2 border-transparent rounded-lg p-2 h-32">
@@ -122,22 +121,25 @@ export default function PersonalInfoPage() {
 
                     {!isEditing && (
                         <button
-                            className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
+                            className="w-[100px] bg-black text-white px-4 py-2 rounded-full shadow-lg"
                             onClick={() => setIsEditing(true)}
                         >
                             編輯
                         </button>
+
                     )}
 
                     {isEditing && (
                         <button
-                            className="w-full bg-black text-white px-4 py-2 rounded-full shadow-lg"
+                            className="w-[150px] bg-black text-white px-4 py-2 rounded-full shadow-lg"
                             onClick={handleSave}
                         >
                             保存
                         </button>
                     )}
+                    
                 </div>
+
             </div>
         </div>
     );
