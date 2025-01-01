@@ -1,9 +1,25 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function MainPage() {
     const [showBlock, setShowBlock] = useState(false);
+    const [showCategories, setShowCategories] = useState(false);
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+    const categories = [
+        '咖啡廳', '博物館', '戶外景點', '餐廳', 
+        '購物', '地標', '公園', '酒店'
+    ];
+
+    const handleCategoryClick = (category: string) => {
+        setSelectedCategories(prev => 
+            prev.includes(category)
+                ? prev.filter(c => c !== category)
+                : [...prev, category]
+        );
+    };
 
     return (
         <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col justify-center items-center">
@@ -20,23 +36,39 @@ export default function MainPage() {
                             className="flex gap-5 justify-between px-4 py-3 w-full rounded-2xl bg-white bg-opacity-70 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
                             role="search"
                         >
-                            <div className="flex gap-4 my-auto">
+                            <button 
+                                type="button" 
+                                onClick={() => setShowCategories(!showCategories)}
+                                className="flex gap-4 my-auto"
+                            >
                                 <img
                                     loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/f3295a5191575e7b1e63e623f6beadd40d70da32e4de9b6214a6b8c306a04a3a?placeholderIfAbsent=true&apiKey=5f3e312fd46a4a3f8a7183f6a724720c"
                                     className="object-contain shrink-0 aspect-square w-[25px]"
                                     alt="Search icon"
                                 />
-                                <label htmlFor="searchInput" className="sr-only">Search</label>
-                                <input
-                                    type="search"
-                                    id="searchInput"
-                                    className="my-auto bg-transparent border-none outline-none"
-                                    placeholder="搜尋"
-                                    aria-label="Search input"
-                                />
-                            </div>
-                            <button type="submit" aria-label="Submit search">
+                                <div className="my-auto bg-transparent border-none outline-none">
+                                    選擇類別
+                                </div>
+                            </button>
+                            {showCategories && (
+                                <div className="absolute top-16 left-4 right-4 bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
+                                    {categories.map(category => (
+                                        <button
+                                            key={category}
+                                            onClick={() => handleCategoryClick(category)}
+                                            className={`px-4 py-2 rounded-full text-sm ${
+                                                selectedCategories.includes(category)
+                                                    ? 'bg-black text-white'
+                                                    : 'bg-gray-100 text-black'
+                                            }`}
+                                        >
+                                            {category}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+                            <button type="submit" aria-label="Submit search" className="ml-auto">
                                 <img
                                     loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/6666590f3c8affd27501c456acf282200381856b6635f5c9736117b022d2672d?placeholderIfAbsent=true&apiKey=5f3e312fd46a4a3f8a7183f6a724720c"
