@@ -62,7 +62,7 @@ export default function MainPage() {
                                     alt=""
                                 />
                                 {showCategories && (
-                                    <div className="fixed top-16 left-1/2 transform -translate-x-1/2 w-[300px] bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
+                                    <div className="fixed top-28 left-1/2 transform -translate-x-1/2 w-[300px] bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
                                         {categories.map(category => (
                                             <div
                                                 key={category}
