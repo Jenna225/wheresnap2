@@ -222,7 +222,7 @@ export default function MainPage() {
                                 <img
                                     loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/6666590f3c8affd27501c456acf282200381856b6635f5c9736117b022d2672d?placeholderIfAbsent=true&apiKey=5f3e312fd46a4a3f8a7183f6a724720c"
-                                    className="object-contain shrink-0 aspect-[0.91] w-[45px] border p-1 rounded-lg"
+                                    className="object-contain shrink-0 aspect-[0.91] w-[45px] border p-1 rounded-lg bg-orange-400"
                                     alt=""
                                 />
                             </button>
