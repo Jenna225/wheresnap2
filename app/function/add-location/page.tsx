@@ -13,13 +13,8 @@ export default function AddLocationPage() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // Here you would typically handle form submission
-        alert("新地點已提交!");
-        // Reset form
-        setLocationName("");
-        setCategory("");
-        setRegion("");
-        setAddress("");
-        setDetails("");
+        // Redirect to confirmation page
+        window.location.href = '/function/add-location/confirmation';
     };
 
     return (
