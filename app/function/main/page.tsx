@@ -48,9 +48,15 @@ export default function MainPage() {
                                         className="object-contain shrink-0 aspect-square w-[25px]"
                                         alt="Search icon"
                                     />
-                                    <div className="my-auto bg-transparent border-none outline-none">
-                                        搜尋...
-                                    </div>
+                                    <input
+                                        type="text"
+                                        placeholder="搜尋..."
+                                        className="my-auto bg-transparent border-none outline-none"
+                                        onChange={(e) => {
+                                            // Handle search input change here
+                                            console.log("Search term:", e.target.value);
+                                        }}
+                                    />
                                 </div>
 
                                 <div
