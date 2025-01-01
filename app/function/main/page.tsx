@@ -133,7 +133,7 @@ export default function MainPage() {
                             </div>
 
                             {/* Location Cards Section */}
-                            <div className="mt-4 w-full overflow-x-auto whitespace-nowrap pb-4" style={{ WebkitOverflowScrolling: 'touch' }}>
+                            <div className="mt-2 w-full overflow-x-auto whitespace-nowrap pb-4" style={{ WebkitOverflowScrolling: 'touch' }}>
                                 <div className="inline-flex gap-4 px-4">
                                     {[
                                         {
