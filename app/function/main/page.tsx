@@ -217,7 +217,7 @@ export default function MainPage() {
                                 type="button"
                                 aria-label="Toggle block"
                                 onClick={() => setShowBlock(!showBlock)}
-                                className="mb-4 absolute bottom-0"
+                                className="mb-2 absolute bottom-2"
                             >
                                 <img
                                     loading="lazy"
