@@ -24,14 +24,7 @@ export default function PersonalInfoPage() {
                     >
                         返回
                     </Link>
-                    {!isEditing && (
-                        <button
-                            className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
-                            onClick={() => setIsEditing(true)}
-                        >
-                            編輯
-                        </button>
-                    )}
+
                 </div>
                 <h1 className="text-2xl font-bold">個人資訊</h1>
                 <br></br>
@@ -55,6 +48,8 @@ export default function PersonalInfoPage() {
                             </button>
                         )}
                     </div>
+
+                    
 
                     {/* Name */}
                     <div className="w-full">
@@ -88,6 +83,15 @@ export default function PersonalInfoPage() {
                             </div>
                         )}
                     </div>
+
+                    {!isEditing && (
+                        <button
+                            className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
+                            onClick={() => setIsEditing(true)}
+                        >
+                            編輯
+                        </button>
+                    )}
 
                     {isEditing && (
                         <button
