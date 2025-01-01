@@ -105,7 +105,7 @@ export default function MainPage() {
                                 </button>
                                 <button
                                     className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
-                                    onClick={() => window.location.href = '/page2'}
+                                    onClick={() => window.location.href = '/function/add-location'}
                                 >
                                     新增地標
                                 </button>
