@@ -62,7 +62,7 @@ export default function MainPage() {
                                     alt=""
                                 />
                                 {showCategories && (
-                                    <div className="absolute top-16 w-[90%] mx-auto bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
+                                    <div className="absolute top-16 w-[300px] mx-auto bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
                                         {categories.map(category => (
                                             <div
                                                 key={category}
@@ -134,7 +134,7 @@ export default function MainPage() {
                             alt="Decorative element"
                         />
                         {showBlock && (
-                            <div className="absolute bottom-16 w-48 p-4 bg-white rounded-lg shadow-md mb-2 space-y-2 z-50">
+                            <div className="absolute bottom-16 w-[300px] p-4 bg-white rounded-lg shadow-md mb-2 space-y-2 z-50">
                                 <button
                                     className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
                                     onClick={() => window.location.href = '/page1'}
