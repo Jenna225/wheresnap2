@@ -216,8 +216,11 @@ export default function MainPage() {
                                             image: "https://picsum.photos/200/150?random=10"
                                         }
                                     ].map((place, index) => (
-                                        <div key={index}
-                                             className="w-64 bg-white rounded-lg shadow-md p-4 inline-block">
+                                        <Link
+                                            key={index}
+                                            href={`/function/location/${index}`}
+                                            className="w-64 bg-white rounded-lg shadow-md p-4 inline-block"
+                                        >
                                             <div className="flex flex-col">
                                                 <img
                                                     src={place.image}
@@ -240,7 +243,7 @@ export default function MainPage() {
                                                     <p className="text-sm text-gray-500 mt-2 line-clamp-2">{place.description}</p>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
