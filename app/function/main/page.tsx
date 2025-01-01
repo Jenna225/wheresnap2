@@ -26,6 +26,7 @@ export default function MainPage() {
             <br></br>
             <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col justify-center items-center">
                 <div className="container flex flex-col gap-8 p-4">
+                    <br></br>
                     <div
                         className="flex overflow-hidden flex-col pt-12 pb-6 mx-auto w-full max-w-[480px]"
                         role="region"
@@ -99,9 +100,7 @@ export default function MainPage() {
                                 alt="Decorative element"
                             />
                         </div>
-
-
-                        <div className="flex flex-col items-end pr-3 pl-14 mt-4 w-full">
+                        <div className="flex flex-col items-end pr-3 pl-14 mt-32 w-full">
                             <div className="flex gap-4 self-start">
                                 <div className="flex">
                                     <img
@@ -133,24 +132,60 @@ export default function MainPage() {
                                 />
                             </div>
 
-                            <div className="mt-1 w-full overflow-x-auto whitespace-nowrap pb-2"
-                                 style={{WebkitOverflowScrolling: 'touch'}}>
-                                <div className="flex gap-4 px-4">
-                                    {[1, 2, 3, 4, 5].map((_, index) => (
+                            {/* Location Cards Section */}
+                            <div className="mt-2 w-full overflow-x-auto whitespace-nowrap pb-4" style={{ WebkitOverflowScrolling: 'touch' }}>
+                                <div className="inline-flex gap-4 px-4">
+                                    {[
+                                        {
+                                            name: "台北101",
+                                            rating: 4.8,
+                                            address: "台北市信義區信義路五段7號",
+                                            description: "台北著名地標，擁有觀景台和購物中心。",
+                                            image: "https://picsum.photos/200/150?random=1"
+                                        },
+                                        {
+                                            name: "國立故宮博物院",
+                                            rating: 4.7,
+                                            address: "台北市士林區至善路二段221號",
+                                            description: "收藏大量中國古代藝術品和文物。",
+                                            image: "https://picsum.photos/200/150?random=2"
+                                        },
+                                        {
+                                            name: "九份老街",
+                                            rating: 4.6,
+                                            address: "新北市瑞芳區基山街",
+                                            description: "以懷舊景觀和美食聞名的山城老街。",
+                                            image: "https://picsum.photos/200/150?random=3"
+                                        }
+                                    ].map((place, index) => (
                                         <div key={index}
-                                             className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md p-4">
-                                            <img
-                                                src={`https://picsum.photos/200/150?random=${index}`}
-                                                alt="Location"
-                                                className="w-full h-24 object-cover rounded-lg"
-                                            />
-                                            <h3 className="text-sm font-semibold mt-2">地點名稱 {index + 1}</h3>
-                                            <p className="text-xs text-gray-500">地點簡介...</p>
+                                             className="w-64 bg-white rounded-lg shadow-md p-4 inline-block">
+                                            <div className="flex flex-col">
+                                                <img
+                                                    src={place.image}
+                                                    alt={place.name}
+                                                    className="w-full h-32 object-cover rounded-lg"
+                                                />
+                                                <div className="mt-2">
+                                                    <h2 className="text-lg font-semibold">{place.name}</h2>
+                                                    <div className="flex items-center gap-1 text-yellow-400">
+                                                        {Array.from({length: 5}, (_, i) => (
+                                                            <span key={i}
+                                                                  className={i < Math.floor(place.rating) ? "text-yellow-400" : "text-gray-300"}>
+                                                            ★
+                                                        </span>
+                                                        ))}
+                                                        <span
+                                                            className="text-gray-500 text-sm ml-1">({place.rating})</span>
+                                                    </div>
+                                                    <p className="text-sm text-gray-600 mt-1">{place.address}</p>
+                                                    <p className="text-sm text-gray-500 mt-2 line-clamp-2">{place.description}</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
                             </div>
-
 
                             {showBlock && (
                                 <div
@@ -179,7 +214,7 @@ export default function MainPage() {
                                 type="button"
                                 aria-label="Toggle block"
                                 onClick={() => setShowBlock(!showBlock)}
-                                className="mb-2 absolute bottom-2"
+                                className="mb-4 absolute bottom-0"
                             >
                                 <img
                                     loading="lazy"
