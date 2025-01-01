@@ -133,7 +133,7 @@ export default function MainPage() {
                             </div>
 
                             {/* Location Cards Section */}
-                            <div className="mt-2 w-full overflow-x-auto whitespace-nowrap pb-4" style={{ WebkitOverflowScrolling: 'touch' }}>
+                            <div className="mt-1 w-full overflow-x-auto whitespace-nowrap pb-2" style={{ WebkitOverflowScrolling: 'touch' }}>
                                 <div className="inline-flex gap-4 px-4">
                                     {[
                                         {
@@ -214,7 +214,7 @@ export default function MainPage() {
                                 type="button"
                                 aria-label="Toggle block"
                                 onClick={() => setShowBlock(!showBlock)}
-                                className="mb-4 absolute bottom-0"
+                                className="mb-2 absolute bottom-2"
                             >
                                 <img
                                     loading="lazy"
