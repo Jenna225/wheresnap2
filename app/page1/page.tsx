@@ -120,13 +120,23 @@ export default function PersonalInfoPage() {
                     </div>
 
                     {!isEditing && (
-                        <button
-                            className="w-[100px] bg-black text-white px-4 py-2 rounded-full shadow-lg"
-                            onClick={() => setIsEditing(true)}
-                        >
-                            編輯
-                        </button>
-
+                        <div className="flex gap-4">
+                            <button
+                                className="w-[100px] bg-black text-white px-4 py-2 rounded-full shadow-lg"
+                                onClick={() => setIsEditing(true)}
+                            >
+                                編輯
+                            </button>
+                            <button
+                                className="w-[100px] bg-red-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-600 transition-colors"
+                                onClick={() => {
+                                    // Add your logout logic here
+                                    window.location.href = '/';
+                                }}
+                            >
+                                登出
+                            </button>
+                        </div>
                     )}
 
                     {isEditing && (
