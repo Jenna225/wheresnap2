@@ -100,7 +100,23 @@ export default function MainPage() {
                                 alt="Decorative element"
                             />
                         </div>
-                        <div className="flex flex-col items-end pr-3 pl-14 mt-32 w-full">
+                        <div className="mt-1 w-full overflow-x-auto whitespace-nowrap pb-2" style={{ WebkitOverflowScrolling: 'touch' }}>
+                            <div className="flex gap-4 px-4">
+                                {[1, 2, 3, 4, 5].map((_, index) => (
+                                    <div key={index} className="flex-shrink-0 w-48 bg-white rounded-lg shadow-md p-4">
+                                        <img
+                                            src={`https://picsum.photos/200/150?random=${index}`}
+                                            alt="Location"
+                                            className="w-full h-24 object-cover rounded-lg"
+                                        />
+                                        <h3 className="text-sm font-semibold mt-2">地點名稱 {index + 1}</h3>
+                                        <p className="text-xs text-gray-500">地點簡介...</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col items-end pr-3 pl-14 mt-4 w-full">
                             <div className="flex gap-4 self-start">
                                 <div className="flex">
                                     <img
