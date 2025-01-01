@@ -26,14 +26,13 @@ export default function MainPage() {
             <br></br>
             <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col justify-center items-center">
                 <div className="container flex flex-col gap-8 p-4">
-                    <br></br>
                     <div
                         className="flex overflow-hidden flex-col pt-12 pb-6 mx-auto w-full max-w-[480px]"
                         role="region"
                         aria-label="Search and navigation section"
                     >
                         <div
-                            className="flex flex-col px-5 w-full text-xl whitespace-nowrap text-zinc-500"
+                            className="t-1 flex flex-col px-5 w-full text-xl whitespace-nowrap text-zinc-500"
                         >
                             <form
                                 className="flex gap-5 justify-between px-4 py-3 w-full rounded-2xl bg-white bg-opacity-70 shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
