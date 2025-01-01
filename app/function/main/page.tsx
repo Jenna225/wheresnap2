@@ -38,8 +38,8 @@ export default function MainPage() {
                         >
                             <button 
                                 type="button" 
-                                onClick={() => setShowCategories(!showCategories)}
                                 className="flex gap-4 my-auto"
+                                aria-label="Submit search"
                             >
                                 <img
                                     loading="lazy"
@@ -51,30 +51,32 @@ export default function MainPage() {
                                     選擇類別
                                 </div>
                             </button>
-                            {showCategories && (
-                                <div className="absolute top-16 left-4 right-4 bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
-                                    {categories.map(category => (
-                                        <button
-                                            key={category}
-                                            onClick={() => handleCategoryClick(category)}
-                                            className={`px-4 py-2 rounded-full text-sm ${
-                                                selectedCategories.includes(category)
-                                                    ? 'bg-black text-white'
-                                                    : 'bg-gray-100 text-black'
-                                            }`}
-                                        >
-                                            {category}
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
-                            <button type="submit" aria-label="Submit search" className="ml-auto">
+
+                            <button type="button"
+                                    onClick={() => setShowCategories(!showCategories)}>
                                 <img
                                     loading="lazy"
                                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/6666590f3c8affd27501c456acf282200381856b6635f5c9736117b022d2672d?placeholderIfAbsent=true&apiKey=5f3e312fd46a4a3f8a7183f6a724720c"
                                     className="object-contain shrink-0 aspect-[0.91] w-[31px]"
                                     alt=""
                                 />
+                                {showCategories && (
+                                    <div className="absolute top-16 left-4 right-4 bg-white rounded-lg shadow-md p-4 z-50 grid grid-cols-2 gap-2">
+                                        {categories.map(category => (
+                                            <button
+                                                key={category}
+                                                onClick={() => handleCategoryClick(category)}
+                                                className={`px-4 py-2 rounded-full text-sm ${
+                                                    selectedCategories.includes(category)
+                                                        ? 'bg-black text-white'
+                                                        : 'bg-gray-100 text-black'
+                                                }`}
+                                            >
+                                                {category}
+                                            </button>
+                                        ))}
+                                    </div>
+                                )}
                             </button>
                         </form>
                         <img
