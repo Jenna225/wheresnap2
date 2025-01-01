@@ -22,6 +22,55 @@ export default function FavoritesPage() {
             address: "新北市瑞芳區基山街",
             description: "以懷舊景觀和美食聞名的山城老街。",
             image: "https://picsum.photos/200/150?random=3"
+        },
+        {
+            name: "西門町",
+            rating: 4.5,
+            address: "台北市萬華區",
+            description: "台北最熱鬧的商圈，街頭藝術和霓虹燈拍照聖地。",
+            image: "https://picsum.photos/200/150?random=4"
+        },
+        {
+            name: "陽明山國家公園",
+            rating: 4.7,
+            address: "台北市北投區",
+            description: "春季櫻花季和秋季芒草季的絕美拍照景點。",
+            image: "https://picsum.photos/200/150?random=5"
+        },
+        {
+            name: "彩虹眷村",
+            rating: 4.6,
+            address: "台中市南屯區春安路56巷",
+            description: "充滿童趣彩繪的拍照景點，色彩繽紛的牆面。",
+            image: "https://picsum.photos/200/150?random=6"
+        },
+        {
+            name: "高美濕地",
+            rating: 4.8,
+            address: "台中市清水區",
+            description: "夕陽美景和風車的完美結合，網美打卡聖地。",
+            image: "https://picsum.photos/200/150?random=7"
+        },
+        {
+            name: "十分瀑布",
+            rating: 4.6,
+            address: "新北市平溪區",
+            description: "台灣的尼加拉瓜瀑布，壯觀的瀑布景觀。",
+            image: "https://picsum.photos/200/150?random=8"
+        },
+        {
+            name: "淡水漁人碼頭",
+            rating: 4.7,
+            address: "新北市淡水區",
+            description: "浪漫的情人橋和夕陽美景，拍照約會勝地。",
+            image: "https://picsum.photos/200/150?random=9"
+        },
+        {
+            name: "龍騰斷橋",
+            rating: 4.5,
+            address: "苗栗縣三義鄉",
+            description: "歷史遺跡與自然景觀的完美結合，文青拍照景點。",
+            image: "https://picsum.photos/200/150?random=10"
         }
     ];
 
