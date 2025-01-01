@@ -77,22 +77,32 @@ export default function FavoritesPage() {
     return (
         <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col">
             <div className="container flex flex-col p-4">
+                <div className="flex justify-between items-center mb-4">
+                    <Link
+                        href="/function/main"
+                        className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
+                    >
+                        返回
+                    </Link>
+
+                </div>
                 <h1 className="text-2xl font-bold mb-4">收藏地標</h1>
-                
+
                 <div className="space-y-4 overflow-y-auto h-[700px]">
                     {favoritePlaces.map((place, index) => (
                         <div key={index} className="bg-white rounded-lg shadow-md p-4">
                             <div className="flex gap-4">
-                                <img 
-                                    src={place.image} 
-                                    alt={place.name} 
+                                <img
+                                    src={place.image}
+                                    alt={place.name}
                                     className="w-24 h-24 object-cover rounded-lg"
                                 />
                                 <div className="flex-1">
                                     <h2 className="text-lg font-semibold">{place.name}</h2>
                                     <div className="flex items-center gap-1 text-yellow-400">
                                         {Array.from({length: 5}, (_, i) => (
-                                            <span key={i} className={i < Math.floor(place.rating) ? "text-yellow-400" : "text-gray-300"}>
+                                            <span key={i}
+                                                  className={i < Math.floor(place.rating) ? "text-yellow-400" : "text-gray-300"}>
                                                 ★
                                             </span>
                                         ))}
@@ -104,15 +114,6 @@ export default function FavoritesPage() {
                             </div>
                         </div>
                     ))}
-                </div>
-                
-                <div className="mt-4">
-                    <Link 
-                        href="/function/main" 
-                        className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
-                    >
-                        返回
-                    </Link>
                 </div>
             </div>
         </div>
