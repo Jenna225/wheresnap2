@@ -8,6 +8,8 @@ export default function PersonalInfoPage() {
     const [name, setName] = useState("張三");
     const [bio, setBio] = useState("熱愛旅行和攝影的台灣人");
     const [profileImage, setProfileImage] = useState("https://picsum.photos/200/200?random=11");
+    const [email, setEmail] = useState("zhangsan@example.com");
+    const [id, setId] = useState("A123456789");
 
     const handleSave = () => {
         setIsEditing(false);
@@ -64,6 +66,40 @@ export default function PersonalInfoPage() {
                         ) : (
                             <div className="w-full border-2 border-transparent rounded-lg p-2">
                                 {name}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Email */}
+                    <div className="w-full">
+                        <label className="block text-sm font-medium text-gray-700 mb-1">電子郵件</label>
+                        {isEditing ? (
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="w-full border-2 border-gray-300 rounded-lg p-2"
+                            />
+                        ) : (
+                            <div className="w-full border-2 border-transparent rounded-lg p-2">
+                                {email}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* ID */}
+                    <div className="w-full">
+                        <label className="block text-sm font-medium text-gray-700 mb-1">身分證字號</label>
+                        {isEditing ? (
+                            <input
+                                type="text"
+                                value={id}
+                                onChange={(e) => setId(e.target.value)}
+                                className="w-full border-2 border-gray-300 rounded-lg p-2"
+                            />
+                        ) : (
+                            <div className="w-full border-2 border-transparent rounded-lg p-2">
+                                {id}
                             </div>
                         )}
                     </div>
