@@ -50,6 +50,15 @@ export default function PersonalInfoPage() {
                     </button>
                 </div>
             </div>
+            
+            <div className="mt-4">
+                <Link 
+                    href="/function/main" 
+                    className="bg-black text-white px-4 py-2 rounded-full shadow-lg"
+                >
+                    返回
+                </Link>
+            </div>
         </div>
     );
 }
