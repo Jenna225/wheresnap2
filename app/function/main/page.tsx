@@ -138,12 +138,15 @@ export default function MainPage() {
                             </div>
 
                             {/* Location Cards Section */}
-                            <div className="-mt-6 w-full overflow-x-auto whitespace-nowrap pb-4" style={{
+                            <div className="-mt-6 w-full overflow-x-auto whitespace-nowrap pb-4 scroll-smooth" style={{
                                 WebkitOverflowScrolling: 'touch',
                                 scrollbarWidth: 'none', /* Firefox */
                                 msOverflowStyle: 'none'  /* IE 10+ */
                             }}>
-                                <div className="inline-flex gap-4 px-4" style={{ minWidth: 'max-content' }}>
+                                <div className="inline-flex gap-4 px-4" style={{ 
+                                    minWidth: 'max-content',
+                                    paddingRight: '430px' /* Add extra padding to allow full scroll */
+                                }}>
                                     {[
                                         {
                                             name: "台北101",
