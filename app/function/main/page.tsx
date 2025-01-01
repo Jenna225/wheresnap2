@@ -49,7 +49,7 @@ export default function MainPage() {
                                         alt="Search icon"
                                     />
                                     <div className="my-auto bg-transparent border-none outline-none">
-                                        選擇類別
+                                        搜尋...
                                     </div>
                                 </div>
 
