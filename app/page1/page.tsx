@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function PersonalInfoPage() {
     return (
         <div className="w-[430px] h-[850px] mx-auto border-2 border-black overflow-hidden flex flex-col">
