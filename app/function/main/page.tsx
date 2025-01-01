@@ -101,19 +101,19 @@ export default function MainPage() {
                                     className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
                                     onClick={() => window.location.href = '/page1'}
                                 >
-                                    頁面 1
+                                    個人資訊
                                 </button>
                                 <button
                                     className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
                                     onClick={() => window.location.href = '/page2'}
                                 >
-                                    頁面 2
+                                    新增地標
                                 </button>
                                 <button
                                     className="w-full px-4 py-2 text-center bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
                                     onClick={() => window.location.href = '/page3'}
                                 >
-                                    頁面 3
+                                    收藏地標
                                 </button>
                             </div>
                         )}
